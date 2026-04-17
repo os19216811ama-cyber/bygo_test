@@ -47,7 +47,7 @@ class LoadTest(unittest.TestCase):
                                     return img && img.complete && img.naturalWidth > 0;
                                 });
                             }
-                            """, arg=local_page[2])
+                            """, arg=local_page[2], timeout=max_wait)
                         end = time.time()
                         page_load_times.append([local_page[0], end - start])
                     except:
